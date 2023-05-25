@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Fonte Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" type="image/png" href="./assets/icon-user.png" />
+
+    <!-- Meu CSS  -->
+    <link rel="stylesheet" href="./main.css" /> 
+
+
+    <title>Formulário - Funcionário</title>
+
+
+</head>
+
+
+<body>
+    <main class="container">
+    
+        <h1> Dados do usuário </h1>
+
+        <form method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data": arquivo -->
+        
+            <fieldset>
+                <legend><i>Dados Pessoais</i></legend>
+            
+
+                <div class="inputBox">
+                    <label for="name"> 
+                        Nome Completo: <br/>
+                        <input type="text" name="name" placeholder="Nome do funcionário" required minlength="3" maxlenght="50"/>
+                    </label>
+                    
+                </div>    
+                    <br/> 
+
+                
+                <div class="inputBox">
+                    <label for="age"> 
+                        Idade: <br/>
+                        <input type="number" name="age" placeholder="Idade" required min="18" />
+                    </label>
+                        
+                </div>    
+                    <br/> 
+
+                    <div class="inputBox">
+                        <label for="photo"> 
+                            Foto: <br/>
+                            <input type="file" name="photo" accept="image/*" class="file" id="myFileInput"/>
+                        </label>
+                            
+                    </div>    
+                        <br/> 
+
+                <div class="inputBox">
+                    <label for="email"> 
+                        E-mail: <br/>
+                        <input type="email" name="email" pattern="(^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$)" title="endereço de email" placeholder="E-mail" required />
+                    </label>
+                    
+                </div>
+                    <br/> 
+
+            </fieldset>
+
+            <fieldset>
+                <legend><i>Dados Profissionais</i></legend>
+                <div class="inputBox">
+                    <label for="companyname"> 
+                        Nome da empresa: <br/>
+                        <input type="text" name="companyname" placeholder="Empresa" />
+                    </label>
+                    
+                </div>
+                    <br/> 
+
+                    <div class="inputBox">
+                        <label for="jobtitle"> 
+                            Cargo na empresa: <br/>
+                            <input type="text" name="jobtitle" placeholder="Cargo" />
+                        </label>
+                        
+                    </div>
+                        <br/> 
+            </fieldset>
+
+                <br/> 
+                
+                <input type="submit" value="Cadastrar" id="submit">
+
+
+    </main>
+
+</body>
+</html>
